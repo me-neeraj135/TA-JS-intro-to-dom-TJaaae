@@ -29,9 +29,9 @@ let topics = document.body.querySelector(`.topics`);
 // 7. Select the input of type `checkbox` with the `id` selector and store in `inputCheckbox`
 let inputCheckbox = document.querySelector(`#remember`);
 // 8. Select the input of type password using Attribute selectors. (eg: input[type="text"]) and store in `password`
-let password = document.querySelector(input[(type = `password`)]);
+let password = document.querySelector(`input[type="password"]`);
 // 9. Select the input using the placeholder attribute selector with value `password` and store in `attrPassword`
-// let attrPassword=document.querySelector(input[])
+let attrPassword = document.querySelector(`input[placeholder="password"]`);
 // 10. Select all the `li` element and store in `allTopics`
 let allTopics = document.querySelectorAll(`li`);
 
