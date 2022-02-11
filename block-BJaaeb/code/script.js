@@ -6,26 +6,43 @@ default value to be "text" and return the input element inside label. (create it
 */
 
 // Your code goes here
+let label = document.createElement(`label`);
+let input = document.createElement(`input`);
+// label.setAttribute(`{}`, `input`);
+input.setAttribute(`type`, `number `);
+label.append(input);
 
+function createInputElm(label, type = `text`) {
+  return label;
+}
 // TEST
-createInputElm('Your name'); //<label>Your name: <input type="text"></label>
-createInputElm('Your age', 'number'); //<label>Your age: <input type="number"></label>
+createInputElm("Your age", "number"); //<label>Your age: <input type="number"></label>
+createInputElm("Your name"); //<label>Your name: <input type="text"></label>
 
 // 2. Do the same thing as above using string literal like `<h1>Hello</h1>`
 
 // Your code goes here
 
 // TEST
-createInputElm('Your name'); //<label>Your name: <input type="text"></label>
-createInputElm('Your age', 'number'); //<label>Your age: <input type="number"></label>
+createInputElm("Your name"); //<label>Your name: <input type="text"></label>
+createInputElm("Your age", "number"); //<label>Your age: <input type="number"></label>
 
 // 3. Create a function named `createList` that accept and array of data like ['Mango', 'Apple', 'Banana'] and returns
 // the html for the link like <ul> <li>Mango</li>  <li>Apple</li>  <li>Banana</li> </ul>
 // Your code goes here
+let ul = document.createElement(`ul`);
+let li = document.createElement(`li`);
+ul.append(li);
 
+function creatList(array) {
+  for (let i = 0; i < array.length; i++) {
+    li.append(array[i]);
+  }
+  return ul;
+}
 // TEST
-createList(['ALABAMA', 'ALASKA', 'HAWAII', 'KENTUCKY']);
-createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
+createList(["ALABAMA", "ALASKA", "HAWAII", "KENTUCKY"]);
+createList(["Afghanistan", "Antarctica", "Congo", "Estonia"]);
 
 // 4. Create a function named `createTodoList` that accept and array of data like [{name: "Learn DOM", isDone: false}, {name: "Learn JS", isDone: true}] and returns
 // the html for single todo will look like given below
@@ -43,11 +60,11 @@ createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
 
 // TEST
 createTodoList([
-  { name: 'Learn DOM', isDone: false },
-  { name: 'Learn JS', isDone: true },
+  { name: "Learn DOM", isDone: false },
+  { name: "Learn JS", isDone: true },
 ]);
 createTodoList([
-  { name: 'Learn DOM', isDone: false },
-  { name: 'Learn React', isDone: true },
-  { name: 'Learn JS', isDone: true },
+  { name: "Learn DOM", isDone: false },
+  { name: "Learn React", isDone: true },
+  { name: "Learn JS", isDone: true },
 ]);
